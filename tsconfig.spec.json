@@ -1,6 +1,7 @@
 {
   "extends": "./tsconfig.json",
   "compilerOptions": {
+    "moduleResolution": "node",
     "outDir": "./out-tsc/spec",
     "types": [
       "jasmine",
@@ -9,6 +10,7 @@
   },
   "files": [
     "src/test.ts",
+    "src/zone-flags.ts",
     "src/polyfills.ts"
   ],
   "include": [

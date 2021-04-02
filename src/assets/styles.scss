@@ -1,0 +1,219 @@
+
+body {
+  font-family: 'Raleway', sans-serif;
+}
+
+h6, h5, h4, h3, h2, h1 {
+  margin-top: 0px !important;
+  margin-bottom: 0px !important;
+}
+
+*:focus {outline:0 !important;}
+
+.full {
+  height: 100%;
+  width: 100%;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.full-height {
+  height: 100%;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.expand-full {
+  height: 100%;
+  width: 100%;
+}
+
+h6 {
+  margin-top: 0px !important;
+  margin-bottom: 0px !important;
+}
+
+
+.mat-bar--on-track .mat-progress-bar-fill::after {
+  background-color: #80ffa4 !important;
+}
+
+.mat-bar--high .mat-progress-bar-fill::after {
+  background-color: #fff980 !important;
+}
+
+.mat-bar--over .mat-progress-bar-fill::after {
+  background-color: #ff6961 !important;
+}
+
+.mat-progress-bar {
+  border-radius: 3px !important;
+  box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.10);
+  height: 8px !important;
+}
+
+.mat-bar--on-track .mat-progress-bar-buffer {
+  background-color: #80ffa4 !important;
+  opacity: 0.3 !important;
+}
+
+
+.mat-bar--high .mat-progress-bar-buffer {
+  background-color: #fff980 !important;
+  opacity: 0.3 !important;
+}
+
+.mat-bar--over .mat-progress-bar-buffer {
+  background-color: #ff6961 !important;
+  opacity: 0.3 !important;
+}
+.mat-progress-bar-background {
+  background-color: #eceff1;
+  fill: #eceff1;
+}
+
+/***** CALENDAR ******/
+
+.cal-month-view {
+  background: transparent;
+}
+
+.cal-month-view .cal-cell-row:hover {
+  background: transparent;
+}
+.cal-month-view .cal-header .cal-cell {
+  font-size: 14px !important;
+  font-weight: 500 !important;
+  color: #1C1C1C;
+}
+
+.cal-month-view .cal-open-day-events {
+  display: none;
+}
+
+.cal-month-view .cal-day-number {
+  margin-top: 0px !important;
+  margin-right: 5px !important;
+  font-size: 15px;
+  font-weight: 300 !important;
+  color: #1C1C1C;
+}
+
+.cal-month-view .cal-day-cell {
+  min-height: inherit !important;
+}
+
+.cal-month-view .cal-cell-top {
+  min-height: 40px !important;
+}
+
+.cal-month-view .cal-day-cell.cal-today .cal-day-number {
+  font-size: 15px;
+}
+
+.cal-month-view .cal-day-cell.cal-weekend .cal-day-number {
+  color: #4FB5C7;
+}
+
+.cal-month-view .cal-day-cell.cal-today {
+  background: #fcecff;
+}
+
+.cal-month-view .cal-day-badge {
+  display: none !important;
+}
+
+.cal-month-view .cal-day-cell.cal-in-month.cal-has-events {
+  max-height: 40px !important;
+}
+
+.cal-month-view .cal-day-cell:not(:last-child) {
+  max-height: 40px;
+}
+
+.cal-month-view .cal-events {
+  transform: translateY(-25px);
+  height: 100%;
+  min-height: 20px;
+  overflow: hidden;
+}
+
+.cal-month-view .cal-event {
+  height: 6px !important;
+  width: 6px !important;
+  background: #4FB5C7 !important;
+}
+
+.cal-month-view .cal-day-cell.cal-today .cal-event {
+  background: #8644A2 !important;
+}
+
+.calendar-modal .modal-content {
+  height: 550px !important;
+  min-height: 550px !important;
+  width: 100%;
+}
+
+.modal-content mini-calendar-modal {
+  height: 100%;
+  width: 100%;
+}
+
+.modal-content edit-budget-modal {
+  height: 100%;
+  width: 100%;
+}
+
+.calendar-modal {
+  height: 550px !important;
+  min-height: 550px !important;
+  width: 100%;
+}
+
+.edit-user-budget-modal .modal-content {
+  width: 100%;
+  height: 400px;
+  min-height: 400px;
+}
+
+.edit-user-budget-modal {
+  width: 100%;
+  height: 400px;
+  min-height: 400px;
+}
+
+.modal-content edit-budget-categories-modal {
+  height: 100%;
+  width: 100%;
+}
+
+.modal-content edit-budget-modal {
+  height: 100%;
+  width: 100%;
+}
+
+.modal-content add-budget-category-modal {
+  height: 100%;
+  width: 100%;
+}
+
+.calendar-modal .modal-content {
+  height: 550px !important;
+  min-height: 550px !important;
+  width: 100%;
+}
+
+.modal-open .modal {
+  position: fixed;
+  overflow-y: hidden;
+}

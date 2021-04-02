@@ -1,10 +1,20 @@
 {
+  "variable-name": {
+    "options": [
+      "ban-keywords",
+      "check-format",
+      "allow-leading-underscore",
+      "allow-leading-underscore",
+      "allow-pascal-case",
+      "allow-snake-case",
+    ]
+  },
   "extends": "tslint:recommended",
   "rules": {
     "array-type": false,
     "arrow-parens": false,
     "deprecation": {
-      "severity": "warning"
+      "severity": "warn"
     },
     "component-class-suffix": true,
     "contextual-lifecycle": true,
@@ -60,6 +70,7 @@
     "no-non-null-assertion": true,
     "no-redundant-jsdoc": true,
     "no-switch-case-fall-through": true,
+    "no-use-before-declare": true,
     "no-var-requires": false,
     "object-literal-key-quotes": [
       true,

@@ -1,0 +1,7 @@
+{
+  "name": "sqlite-crud",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}
