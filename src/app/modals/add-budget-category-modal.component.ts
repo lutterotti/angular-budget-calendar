@@ -15,14 +15,6 @@ import uuidv4 from 'uuid/v4';
 @Component({
   selector: 'add-budget-category-modal',
   styles: [`
-    .add-budget-category__heading {
-      display: flex;
-      justify-content: start;
-      align-items: center;
-      width: 100%;
-      padding: 16px 12px;
-    }
-
     input {
       padding: 3px 6px;
       letter-spacing: 1.05px;
@@ -71,7 +63,7 @@ import uuidv4 from 'uuid/v4';
       justify-content: space-between;
       align-items: center;
       width: 100%;
-      padding: 10px 10px;
+      padding: 14px 10px;
       border-radius: 4px;
     }
 
@@ -124,6 +116,7 @@ import uuidv4 from 'uuid/v4';
       flex-direction: column;
       width: 100%;
       height: 100%;
+      justify-content: space-between;
     }
 
     .refresh-color {
@@ -140,35 +133,37 @@ import uuidv4 from 'uuid/v4';
   template: `
     <ion-content [scrollY]="false" [scrollX]="false">
       <div class="content-container">
-        <div class="add-budget-category-container">
-          <div class="add-budget-category__heading">
-            <h4 style="font-weight: 600; letter-spacing: 0.4px;">Create Budget Category</h4>
+        <div class="main-display">
+          <div class="header-container">
+              <h4 class="header-content">Create Budget Category</h4>
           </div>
           <div class="add-budget-category-content">
-            <div class="input-container" style="padding-top: 8px;">
-              <span class="input-label">Budget Title</span>
-              <input class="expense-input" type="text" [(ngModel)]="budget_category.category_name"/>
+            <div style="display: flex; justify-content: center; align-items: center; flex-direction: column;">
+              <div class="input-container" style="padding-top: 8px;">
+                <span class="input-label">Budget Title</span>
+                <input class="expense-input" style="width: 100%;" type="text" [(ngModel)]="budget_category.category_name"/>
+              </div>
+              <div class="input-container" style="padding-top: 8px;">
+                <span class="input-label">Alotted Funds</span>
+                <input class="expense-input" style="width: 100%;" type="text" [ngModel]="budget_category.alotted_funds | currency:'USD':'symbol' : '1.0'" [ngModelOptions]="{updateOn:'blur'}" (ngModelChange)="budget_category.alotted_funds=cleanPipe($event)"/>
+              </div>
+              <div class="input-container" style="padding-top: 8px;">
+                <span class="input-label">Active</span>
+                <select class="budget-dropdown" style="max-width: 90px" [(ngModel)]="budget_category.active">
+                  <option [ngValue]="true">Active</option>
+                  <option [ngValue]="false">Inactive</option>
+                </select>
+              </div>
+              <div class="input-container" style="padding-top: 8px;">
+                <span class="input-label">Display Color</span>
+                <i class="zi-refresh refresh-color" (click)="generateNewDisplayColour()"></i>
+                <div style="height: 15px; width: 90px; border-radius: 5px;" [ngStyle]="{'background': budget_category.display_colour}"></div>
+              </div>
             </div>
-            <div class="input-container" style="padding-top: 8px;">
-              <span class="input-label">Active</span>
-              <select class="budget-dropdown" [(ngModel)]="budget_category.active">
-                <option [ngValue]="true">Active</option>
-                <option [ngValue]="false">Inactive</option>
-              </select>
+            <div class="button-container">
+              <div class="modal-button--cancel" (click)="close()">Cancel</div>
+              <div class="modal-button--update" (click)="create()" [ngClass]="{'button--disabled': !canCreateBudgetCategory()}">Create</div>
             </div>
-            <div class="input-container" style="padding-top: 8px;">
-              <span class="input-label">Alotted Funds</span>
-              <input class="expense-input" type="text" [ngModel]="budget_category.alotted_funds | currency:'USD':'symbol' : '1.0'" [ngModelOptions]="{updateOn:'blur'}" (ngModelChange)="budget_category.alotted_funds=cleanPipe($event)"/>
-            </div>
-            <div class="input-container" style="padding-top: 8px;">
-              <span class="input-label">Display Color</span>
-              <i class="zi-refresh refresh-color" (click)="generateNewDisplayColour()"></i>
-              <div style="height: 15px; width: 90px; border-radius: 5px;" [ngStyle]="{'background': budget_category.display_colour}"></div>
-            </div>
-          </div>
-          <div class="button-container">
-            <div class="modal-button--cancel" (click)="close()">Cancel</div>
-            <div class="modal-button--update" (click)="create()" [ngClass]="{'button--disabled': !canCreateBudgetCategory()}">Create</div>
           </div>
         </div>
       </div>

@@ -175,7 +175,7 @@ import uuidv4 from 'uuid/v4';
                   </select>
                 </div>
               </div>
-              <div class="input-container" style="justify-content: flex-start;">
+              <div class="input-container" style="justify-content: flex-start; flex-direction: row;">
                 <div class="label-container" style="margin-right: 8px;">
                   <span class="input-label">Reccuring</span>
                   <select class="budget-dropdown" [(ngModel)]="new_expense[0].recurring_expense" (ngModelChange)="handleExpenseRecurring($event)">
@@ -193,16 +193,16 @@ import uuidv4 from 'uuid/v4';
                     <option [ngValue]="Frequency.DAILY">Daily</option>
                   </select>
                 </div>
-              </div>
 
-              <div class="input-container" *ngIf="selected_byweekday" style="padding: 0px; margin-top: 4px; justify-content: flex-start; border: 1px solid #ddd;">
-                <div class="freq-day" [ngClass]="{'freq-day--selected': selected_byweekday.weekday === 0}">Mon</div>
-                <div class="freq-day" [ngClass]="{'freq-day--selected': selected_byweekday.weekday === 1}">Tue</div>
-                <div class="freq-day" [ngClass]="{'freq-day--selected': selected_byweekday.weekday === 2}">Wed</div>
-                <div class="freq-day" [ngClass]="{'freq-day--selected': selected_byweekday.weekday === 3}">Thu</div>
-                <div class="freq-day" [ngClass]="{'freq-day--selected': selected_byweekday.weekday === 4}">Fri</div>
-                <div class="freq-day" [ngClass]="{'freq-day--selected': selected_byweekday.weekday === 5}">Sat</div>
-                <div class="freq-day" [ngClass]="{'freq-day--selected': selected_byweekday.weekday === 6}">Sun</div>
+                <div class="input-container" *ngIf="selected_byweekday" style="padding: 0px; margin-top: 4px; justify-content: flex-start; border: 1px solid #ddd;">
+                  <div class="freq-day" [ngClass]="{'freq-day--selected': selected_byweekday.weekday === 0}">Mon</div>
+                  <div class="freq-day" [ngClass]="{'freq-day--selected': selected_byweekday.weekday === 1}">Tue</div>
+                  <div class="freq-day" [ngClass]="{'freq-day--selected': selected_byweekday.weekday === 2}">Wed</div>
+                  <div class="freq-day" [ngClass]="{'freq-day--selected': selected_byweekday.weekday === 3}">Thu</div>
+                  <div class="freq-day" [ngClass]="{'freq-day--selected': selected_byweekday.weekday === 4}">Fri</div>
+                  <div class="freq-day" [ngClass]="{'freq-day--selected': selected_byweekday.weekday === 5}">Sat</div>
+                  <div class="freq-day" [ngClass]="{'freq-day--selected': selected_byweekday.weekday === 6}">Sun</div>
+                </div>
               </div>
 
               <div class="button-container">

@@ -71,7 +71,7 @@ import { UserSelectors } from '../store/user/user.selectors';
       justify-content: space-between;
       align-items: center;
       width: 100%;
-      padding: 10px 10px;
+      padding: 14px 10px;
       border-radius: 4px;
     }
 
@@ -144,9 +144,9 @@ import { UserSelectors } from '../store/user/user.selectors';
   template: `
     <ion-content [scrollY]="false" [scrollX]="false">
       <div class="content-container" style="overflow: hidden;">
-        <div class="edit-categories-container" style="overflow: hidden;">
-          <div class="edit-categories__heading">
-            <h4 style="font-weight: 600; letter-spacing: 0.4px;">Edit Budget Categories</h4>
+        <div class="main-display" style="overflow: hidden; overflow-y: scroll;">
+          <div class="header-container" style="justify-content: center;">
+            <h4 class="header-content">Edit Budget Categories</h4>
           </div>
           <div class="edit-categories-content">
             <div class="input-container" style="position: relative;" *ngFor="let category of budget_categories">

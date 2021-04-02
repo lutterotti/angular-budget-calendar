@@ -186,5 +186,6 @@ export class UserBudgetComponent implements OnInit, OnDestroy {
   openAddExpenseModal() {
     const modalRef = this.NgbModal.open(AddExpenseModalComponent, {windowClass: 'calendar-modal'});
     modalRef.componentInstance.dateOnOpen = this.viewDate;
+    modalRef.result.then(() => this.updateDisplayedCalendarEvents());
   }
 }

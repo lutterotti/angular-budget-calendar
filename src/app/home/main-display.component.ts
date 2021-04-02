@@ -1,15 +1,11 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
-import { AngularFireDatabase } from 'angularfire2/database';
 import { AuthService } from '../services/auth.service';
-import { Platform } from '@ionic/angular';
 import { AngularFireAuth } from '@angular/fire/auth';
 import { AppState } from '../store/app.state';
 import { Store } from '@ngrx/store';
-import { UserSelectors, getUserData } from '../store/user/user.selectors';
-import { FirebaseService } from '../services/firebase.service';
+import { UserSelectors } from '../store/user/user.selectors';
 import { Observable, Subject } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
-import { getUserBudget } from '../store/budget/budget.actions';
 import { budgetStateSelectors } from '../store/budget/budget.selector';
 import { BudgetCategory, UserBudget } from '../store/budget/budget.model';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
@@ -102,10 +98,7 @@ import { AddExpenseModalComponent } from '../modals/add-calendar-expense-modal.c
             </div>
           </ng-template>
         </div>
-        <!--<img style="z-index: 0; position: absolute; bottom: 20px; width: 100%; opacity: 50%;" src="assets/images/blue-curve-home.png">
-        <img style="z-index: 0; position: absolute; bottom: 0px; width: 100%; opacity: 55%;" src="assets/images/purple-curve-home.png">-->
       </div>
-
     </ion-content>
   `
 })

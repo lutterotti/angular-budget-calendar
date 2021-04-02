@@ -67,22 +67,44 @@ import { budgetStateSelectors } from '../store/budget/budget.selector';
       right: 10px;
       font-size: 24px;
     }
+
+    .budget-category-actions {
+      color: #fdfaea;
+      border: 2px solid #fdfaea;
+      border-radius: 5px;
+      padding: 6px;
+      font-size: 10px;
+      right: 10px;
+      font-weight: 700;
+    }
+
+    .budget-actions-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      margin-top: 10px;
+    }
   `],
   template: `
-    <ion-content>
+    <ion-content [scrollY]="false" [scrollX]="false">
       <div class="content-container" style="height: 100vh; width: 100vw;">
-        <div class="budget-overview__heading">
-          <h4 class="user-title">Budget Categories</h4>
-          <i class="zi-edit-pencil edit-icon" (click)="handleEditBudgetCategories()"></i>
-          <i class="zi-add-outline add-budget-category" (click)="openAddBudgetCategory()"></i>
-        </div>
-        <div class="budget-overview__container">
-          <div class="budget__container" *ngFor="let category of (budget_categories$ | async)">
-            <div class="budget__title">
-              <span style="margin-right: 8px; font-weight: 500;">{{category.category_name}}</span>
-              <span style="font-size: 12px; color: #999; font-style: italic; line-height: 2.3;">&#36;{{category.expenses_amount}} of &#36;{{category.alotted_funds}}, &#36;{{getAmountLeft(category.expenses_amount, category.alotted_funds)}} left</span>
+        <div class="main-display">
+          <div class="header-container" style="margin-bottom: 0px; flex-direction: column; padding: 10px;">
+            <h4 class="header-content">Budget Categories</h4>
+            <div class="budget-actions-container">
+              <div class="budget-category-actions" style="margin-right: 10px;" (click)="openAddBudgetCategory()">ADD CATEGORY</div>
+              <div class="budget-category-actions" (click)="handleEditBudgetCategories()">EDIT CATEGORIES</div>
             </div>
-            <horizontal-bar-graph [currentAmount]="category.expenses_amount" [max]="category.alotted_funds"></horizontal-bar-graph>
+          </div>
+          <div class="budget-overview__container">
+            <div class="budget__container" *ngFor="let category of (budget_categories$ | async)">
+              <div class="budget__title">
+                <span style="margin-right: 8px; font-weight: 500;">{{category.category_name}}</span>
+                <span style="font-size: 12px; color: #999; font-style: italic; line-height: 2.3;">&#36;{{category.expenses_amount}} of &#36;{{category.alotted_funds}}, &#36;{{getAmountLeft(category.expenses_amount, category.alotted_funds)}} left</span>
+              </div>
+              <horizontal-bar-graph [currentAmount]="category.expenses_amount" [max]="category.alotted_funds"></horizontal-bar-graph>
+            </div>
           </div>
         </div>
       </div>
