@@ -58,7 +58,6 @@ import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
             style="width: 100%;"
             [viewDate]="viewDate"
             [events]="(calendar_events)"
-            [refresh]="refresh"
             [activeDayIsOpen]="activeDayIsOpen"
             (dayClicked)="dayClicked($event.day)"
             (beforeViewRender)="updateCalendarEvents($event)"
@@ -77,7 +76,6 @@ export class UserBudgetComponent implements OnInit, OnDestroy {
   public CalendarView = CalendarView;
   public viewDate: Date = new Date();
   public activeDayIsOpen: boolean = true;
-  public refresh: Subject<any> = new Subject();
   public expenses: Expense[] = [] as Expense[];
   public calendar_events: Expense[] = [] as Expense[];
   public viewPeriod: CalendarViewPeriod;

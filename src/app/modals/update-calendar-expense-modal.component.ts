@@ -146,7 +146,6 @@ import { UserSelectors } from '../store/user/user.selectors';
               <div
                 class="button__title"
                 mwlCalendarToday
-                (click)="updateSelectedDate()"
                 [(viewDate)]="viewDate">
                 Today
               </div>
@@ -165,7 +164,6 @@ import { UserSelectors } from '../store/user/user.selectors';
             style="width: 100%;"
             [viewDate]="viewDate"
             [events]="display_expense"
-            [refresh]="refresh"
             [activeDayIsOpen]="activeDayIsOpen"
             (dayClicked)="dayClicked($event.day)"
             (beforeViewRender)="updateCalendarEvents($event)"

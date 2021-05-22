@@ -19,7 +19,7 @@ export function momentAdapterFactory() {
 };
 
 
-class CustomDateFormatter extends CalendarNativeDateFormatter {
+export class CustomDateFormatter extends CalendarNativeDateFormatter {
 
   public monthViewColumnHeader({date, locale}: DateFormatterParams): string {
     return new Intl.DateTimeFormat(locale, {weekday: 'short'}).format(date);

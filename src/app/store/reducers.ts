@@ -1,12 +1,12 @@
 import { BudgetDataReducer } from './budget/budget.reducer';
-import { UserReducer } from './user/user.reducer';
+import { reducer, UserReducer } from './user/user.reducer';
 import { InjectionToken } from '@angular/core';
 import { ActionReducerMap } from '@ngrx/store';
 import { App } from './app.state';
 
 export const REDUCERS = {
   budget_state: BudgetDataReducer,
-  user: UserReducer
+  user: reducer
 }
 
 export const reducerToken = new InjectionToken<ActionReducerMap<App>>('APP_REDUCERS');

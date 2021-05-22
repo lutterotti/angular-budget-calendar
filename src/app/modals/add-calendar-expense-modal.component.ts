@@ -129,7 +129,6 @@ import uuidv4 from 'uuid/v4';
                 <div
                   class="button__title"
                   mwlCalendarToday
-                  (click)="updateSelectedDate()"
                   [(viewDate)]="viewDate">
                   Today
                 </div>
@@ -148,7 +147,6 @@ import uuidv4 from 'uuid/v4';
               style="width: 100%;"
               [viewDate]="viewDate"
               [events]="display_expense"
-              [refresh]="refresh"
               [activeDayIsOpen]="activeDayIsOpen"
               (dayClicked)="dayClicked($event.day)"
               (beforeViewRender)="updateCalendarEvents($event)"

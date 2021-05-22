@@ -1,4 +1,4 @@
-import { createReducer, on } from '@ngrx/store';
+import { Action, createReducer, on } from '@ngrx/store';
 import { User } from './user.model';
 import { UserActions } from './user.actions';
 
@@ -15,3 +15,7 @@ export const UserReducer = createReducer(
   initial_state,
   receiveUserDetails
 )
+
+export function reducer(state: User | undefined, action: Action) {
+  return UserReducer(state, action);
+}

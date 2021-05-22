@@ -63,7 +63,6 @@ import { takeUntil } from 'rxjs/operators';
           style="width: 100%;"
           [viewDate]="viewDate"
           [events]="(calendar_events)"
-          [refresh]="refresh"
           [activeDayIsOpen]="activeDayIsOpen"
           (dayClicked)="dayClicked($event.day)"
           (beforeViewRender)="updateCalendarEvents($event)"
@@ -79,7 +78,6 @@ export class MiniCalendarComponent implements OnInit, OnDestroy {
   public CalendarView = CalendarView;
   public viewDate: Date = new Date();
   public activeDayIsOpen: boolean = true;
-  public refresh: Subject<any> = new Subject();
   public cloned_expenses: Expense[] = [] as Expense[];
   public calendar_events: Expense[];
   public viewPeriod: CalendarViewPeriod;
