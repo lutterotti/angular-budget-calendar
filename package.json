@@ -13,7 +13,7 @@
   },
   "private": true,
   "dependencies": {
-    "@angular/animations": "^8.2.14",
+    "@angular/animations": "~8.1.2",
     "@angular/cdk": "^8.2.3",
     "@angular/common": "~8.1.2",
     "@angular/core": "~8.1.2",
@@ -55,7 +55,7 @@
     "ionic-angular": "^3.9.10",
     "ios-deploy": "^1.10.0",
     "moment": "^2.26.0",
-    "ng-circle-progress": "^1.5.1",
+    "ng-circle-progress": "1.5.1",
     "ngx-bootstrap": "^5.6.1",
     "ngx-date-picker": "0.0.24",
     "reselect": "^4.0.0",
