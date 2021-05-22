@@ -11,7 +11,7 @@ phases:
   pre_build:
     commands:
       - echo Installing dependencies...
-      - npm install
+      - npm install --legacy-peer-deps
   build:
     commands:
       - echo Building...
