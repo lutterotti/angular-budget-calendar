@@ -131,7 +131,7 @@ import uuidv4 from 'uuid/v4';
     }
   `],
   template: `
-    <ion-content [scrollY]="false" [scrollX]="false">
+    <ion-content [scrollY]="false" [scrollX]="false" style="height: 520px;">
       <div class="content-container">
         <div class="main-display">
           <div class="header-container">

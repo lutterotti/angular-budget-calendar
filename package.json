@@ -53,7 +53,6 @@
     "firebase": "^7.9.3",
     "ionic": "^5.4.16",
     "ionic-angular": "^3.9.10",
-    "ios-deploy": "^1.10.0",
     "moment": "^2.26.0",
     "ng-circle-progress": "1.5.1",
     "ngx-bootstrap": "^5.6.1",

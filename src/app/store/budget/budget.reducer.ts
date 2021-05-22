@@ -5,7 +5,7 @@ import { parseISO } from 'date-fns';
 
 const empty_user_budget = {
   reset_frequency: BudgetFrequency.MONTHLY_END_OF_MONTH,
-  budget_amount: 0,
+  budget_amount: 2500,
   savings_amount: 0,
 } as UserBudget;
 

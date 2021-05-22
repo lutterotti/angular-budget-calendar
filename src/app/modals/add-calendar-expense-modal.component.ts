@@ -110,9 +110,9 @@ import uuidv4 from 'uuid/v4';
     }
   `],
   template: `
-  <ion-content [scrollY]="false" [scrollX]="false">
+  <ion-content [scrollY]="false" [scrollX]="false" style="height: 580px;">
     <div class="content-container" style="height: auto;">
-      <div style="display: flex; flex-direction: column; justify-content: flex-start; align-items: center; width: 100%; height: 100%; max-height: 550px !important;">
+      <div style="display: flex; flex-direction: column; justify-content: flex-start; align-items: center; width: 100%; height: 100%;">
         <div class="main-display">
           <div class="header-container header-container__budget">
             <h4 class="header-content" style="line-height: 17px;">{{ viewDate | calendarDate:(view + 'ViewTitle'):'en' }}</h4>

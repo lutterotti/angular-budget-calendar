@@ -127,7 +127,7 @@ import { UserSelectors } from '../store/user/user.selectors';
     }
   `],
   template: `
-  <ion-content [scrollY]="true" [scrollX]="false">
+  <ion-content [scrollY]="true" [scrollX]="false" style="height: 580px;">
     <div class="content-container" style="height: auto;">
       <div style="display: flex; flex-direction: column; justify-content: flex-start; align-items: center; width: 100%; height: 100%; max-height: 550px !important;">
         <div class="main-display">

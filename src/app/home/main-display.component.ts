@@ -45,8 +45,8 @@ import { AddExpenseModalComponent } from '../modals/add-calendar-expense-modal.c
   `],
   template: `
     <ion-content [scrollY]="false" [scrollX]="false">
-      <div class="content-container" style="height: 100vh; width: 100vw; position: relative;">
-        <div class="main-display">
+      <div class="content-container">
+        <div class="main-display" style="height: 740px; width: 420px; position: relative;">
           <div *ngIf="(user_exists$ | async); then authenticated else guest"></div>
 
           <!-- User NOT logged in -->

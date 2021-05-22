@@ -142,7 +142,7 @@ import { UserSelectors } from '../store/user/user.selectors';
     }
   `],
   template: `
-    <ion-content [scrollY]="false" [scrollX]="false">
+    <ion-content [scrollY]="false" [scrollX]="false" style="height: 520px;">
       <div class="content-container" style="overflow: hidden;">
         <div class="main-display" style="overflow: hidden; overflow-y: scroll;">
           <div class="header-container" style="justify-content: center;">

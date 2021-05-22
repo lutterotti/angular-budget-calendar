@@ -8,6 +8,14 @@ h6, h5, h4, h3, h2, h1 {
   margin-bottom: 0px !important;
 }
 
+p {
+  cursor: default;
+}
+
+div {
+  cursor: default;
+}
+
 *:focus {outline:0 !important;}
 
 .full {
@@ -163,8 +171,6 @@ h6 {
 }
 
 .calendar-modal .modal-content {
-  height: 550px !important;
-  min-height: 550px !important;
   width: 100%;
 }
 
@@ -179,8 +185,6 @@ h6 {
 }
 
 .calendar-modal {
-  height: 550px !important;
-  min-height: 550px !important;
   width: 100%;
 }
 
@@ -212,12 +216,14 @@ h6 {
 }
 
 .calendar-modal .modal-content {
-  height: 550px !important;
-  min-height: 550px !important;
   width: 100%;
 }
 
 .modal-open .modal {
   position: fixed;
   overflow-y: hidden;
+}
+
+.modal.fade .modal-dialog {
+  transform: translate(0, 0) !important;
 }

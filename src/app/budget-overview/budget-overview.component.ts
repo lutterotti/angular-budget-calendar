@@ -88,8 +88,8 @@ import { budgetStateSelectors } from '../store/budget/budget.selector';
   `],
   template: `
     <ion-content [scrollY]="false" [scrollX]="false">
-      <div class="content-container" style="height: 100vh; width: 100vw;">
-        <div class="main-display">
+      <div class="content-container">
+        <div class="main-display" style="height: 740px; width: 420px; position: relative;">
           <div class="header-container" style="margin-bottom: 0px; flex-direction: column; padding: 10px;">
             <h4 class="header-content">Budget Categories</h4>
             <div class="budget-actions-container">

@@ -91,7 +91,7 @@ import { UserSelectors } from '../store/user/user.selectors';
     }
   `],
   template: `
-    <ion-content [scrollY]="false" [scrollX]="false">
+    <ion-content [scrollY]="false" [scrollX]="false" style="height: 520px;">
       <div class="content-container">
         <div class="edit-budget-container">
           <div class="edit-budget__heading">
